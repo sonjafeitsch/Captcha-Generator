@@ -1,3 +1,5 @@
-/**
- * Created by sonja on 10/29/16.
- */
+describe("The constructor is supposed a proper Captcha object", function() {
+    it('Constructor Captcha exists', function(){
+        expect(Captcha).toBeDefined();
+    });
+});
