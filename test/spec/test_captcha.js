@@ -32,3 +32,10 @@ describe('The getSVG method of Captcha objects is supposed to generate the captc
         expect(typeof captcha.getSVG).toEqual('function');
     });
 });
+
+describe('The checkCaptcha method of Captcha objects is supposed to check if input is equal to fingerprint', function(){
+    var captcha = new Captcha();
+    it('checkCaptcha method is supposed to be a function', function(){
+        expect(typeof captcha.checkCaptcha).toEqual('function');
+    });
+});
