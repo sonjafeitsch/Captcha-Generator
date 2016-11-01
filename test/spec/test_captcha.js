@@ -21,4 +21,7 @@ describe("The constructor is supposed a proper Captcha object", function() {
     it('the width of the svg should be set to the configured width', function(){
         expect(Number(captcha.width)).toEqual(defaultConf.width);
     });
+    it('the length of the fingerprint should be set to the configured fingerprintLength', function(){
+        expect(Number(captcha.fingerprintLength)).toEqual(defaultConf.fingerprintLength);
+    });
 });
