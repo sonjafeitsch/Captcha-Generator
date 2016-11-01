@@ -26,7 +26,7 @@ describe("The constructor is supposed a proper Captcha object", function() {
     });
 });
 
-describe('The setData method of Captcha objects is supposed to generate the captcha as SVG', function(){
+describe('The getSVG method of Captcha objects is supposed to generate the captcha as SVG', function(){
     var captcha = new Captcha();
     it('getSVG method is supposed to be a function', function(){
         expect(typeof captcha.getSVG).toEqual('function');
