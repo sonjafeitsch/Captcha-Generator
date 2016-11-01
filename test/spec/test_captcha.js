@@ -9,4 +9,10 @@ describe("The constructor is supposed a proper Captcha object", function() {
     it('captcha object should be an instance of Captcha class', function(){
         expect(captcha instanceof Captcha).toBeTruthy();
     });
+    it('the height of the svg should be set to the configured height', function(){
+        expect(Number(captcha.svg.attr("height"))).toEqual(defaultConf.height);
+    });
+    it('the width of the svg should be set to the configured width', function(){
+        expect(Number(captcha.svg.attr("width"))).toEqual(defaultConf.width);
+    });
 });
