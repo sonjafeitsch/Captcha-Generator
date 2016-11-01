@@ -1,7 +1,7 @@
 defaultConf = {
     height: 100,
     width: 300,
-    fingerprintLength: 20
+    fingerprintLength: 4
 };
 
 describe("The constructor is supposed a proper Captcha object", function() {
