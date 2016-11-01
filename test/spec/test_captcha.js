@@ -1,3 +1,9 @@
+defaultConf = {
+    height: 100,
+    width: 300,
+    fingerprintLength: 20
+};
+
 describe("The constructor is supposed a proper Captcha object", function() {
     it('Constructor Captcha exists', function(){
         expect(Captcha).toBeDefined();
@@ -10,9 +16,9 @@ describe("The constructor is supposed a proper Captcha object", function() {
         expect(captcha instanceof Captcha).toBeTruthy();
     });
     it('the height of the svg should be set to the configured height', function(){
-        expect(Number(captcha.svg.attr("height"))).toEqual(defaultConf.height);
+        expect(Number(captcha.height)).toEqual(defaultConf.height);
     });
     it('the width of the svg should be set to the configured width', function(){
-        expect(Number(captcha.svg.attr("width"))).toEqual(defaultConf.width);
+        expect(Number(captcha.width)).toEqual(defaultConf.width);
     });
 });
