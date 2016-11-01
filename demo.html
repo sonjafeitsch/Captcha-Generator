@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is a demo of awesome capture generator</title>
+    <script src="js/captchaGenerator.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/crypto-js/crypto-js.js"></script>
+</head>
+<body>
+    Awesome capture generator
+    <div id="test"></div>
+</body>
+<script>
+    var captcha = new Captcha();
+    $('#test').html(captcha.getSVG());
+</script>
+</html>
