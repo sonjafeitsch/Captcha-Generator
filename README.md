@@ -1,8 +1,28 @@
 # Captcha-Generator
 JavaScript library which generates captchas based on svg
 
+# Dependencies
+- jQuery
+- crypto-js
+
+# Installation
+Clone the project via git
+```
+git clone https://github.com/sonjahohlfeld/Captcha-Generator.git
+```
+
+# Usage
+Create an empty div in the html.
+```
+<div id="myFirstCaptcha"></div>
+```
+Define a new captcha object and add the SVG to the div via JavaScript and jQuery.
+```
+var captcha = new Captcha();
+$('#myFirstCaptcha').html(captcha.getSVG());
+```
 # Changelog
-**0.1.0 Tue Nov 01, 11:15**
+**0.1.0**
  - First release of the Captcha-Generator code.
  - Get SVG
  - Check if user input is equal to fingerprint
