@@ -56,3 +56,24 @@ describe("The getColor method is supposed to return the color of the svg", funct
         expect(color).toEqual(defaultConf.color);
     });
 });
+
+describe('The setColor method is supposed to set a new color for the captcha', function(){
+    var captcha = new Captcha();
+    it('setColor method is supposed to be a function', function(){
+        expect(typeof captcha.setColor()).toEqual('function');
+    });
+    it('the returned value of the setColor method should be the same as the color which is setted and returned by the setter-method', function(){
+        var color = "#000000";
+        expect(captcha.setColor(color)).toEqual(color);
+    });
+    it('when setColor is called several times the color should have the same value as the returned color of getColor method', function(){
+        var color = "#000000";
+        captcha.setColor(color);
+        var newColor = captcha.getColor();
+        expect(newColor).toEqual(color);
+    });
+    it('the setColor method should throw an error message if the assigned color is empty', function(){
+        var color = "";
+        expect(function(){captcha.setColor(color);}).toThrow("Sorry, you entered an empty value. Please try it again.");
+    });
+});
