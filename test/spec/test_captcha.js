@@ -45,10 +45,10 @@ describe("The getColor method is supposed to return the color of the svg", funct
     var captcha = new Captcha();
 
     it('getColor method is supposed to be a function', function(){
-        expect(typeof captcha.getColor()).toEqual('function');
+        expect(typeof captcha.getColor).toEqual('function');
     });
     it('the function should return a defined value', function(){
-        var color = ali.getColor();
+        var color = captcha.getColor();
         expect(color).toBeDefined();
     });
     it('the function should return the color of the defaultConf', function(){

@@ -58,3 +58,11 @@ Captcha.prototype.checkCaptcha = function(input){
     var inputAsHash = CryptoJS.MD5(input);
     return inputAsHash.toString() === that.fingerprintHash.toString();
 };
+
+/**
+ * Function which returns the color of the captcha object
+ * @returns {string}
+ */
+Captcha.prototype.getColor = function(){
+    return this.color;
+};
