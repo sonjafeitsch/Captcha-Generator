@@ -11,6 +11,7 @@ function Captcha() {
     this.width = 300;
     this.fingerprintLength = 4;
     this.fingerprintHash = "";
+    this.color = "#ef8216";
 }
 
 /**
@@ -29,7 +30,7 @@ Captcha.prototype.getSVG = function(){
 
     var svg = "<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>" +
         "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve'>" +
-        "<rect x='0' y='50' width='250' height='100' fill='#ef8216' z-index='-1' />" +
+        "<rect x='0' y='50' width='250' height='100' fill='"+that.color+"' z-index='-1' />" +
         "<line x1='100' y1='50' x2='290' y2='50' /><line x1='100' y1='120' x2='290' y2='120' /><line x1='100' y1='50' x2='100' y2='120' /><line x1='290' y1='50' x2='290' y2='120' />g>" +
         "<text x='20 40 70 100' y='110' style='font-size:40px; font-family:Times New Roman, Courier; font-weight: bold; font-style=oblique; stroke: black; stoke-width:1'transform='rotate(20, 100, 100)'>" +
         fingerprint[0] +

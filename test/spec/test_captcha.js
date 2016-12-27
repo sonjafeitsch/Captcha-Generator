@@ -1,7 +1,8 @@
 defaultConf = {
     height: 100,
     width: 300,
-    fingerprintLength: 4
+    fingerprintLength: 4,
+    color: '#ef8216'
 };
 
 describe("The constructor is supposed a proper Captcha object", function() {
@@ -37,5 +38,21 @@ describe('The checkCaptcha method of Captcha objects is supposed to check if inp
     var captcha = new Captcha();
     it('checkCaptcha method is supposed to be a function', function(){
         expect(typeof captcha.checkCaptcha).toEqual('function');
+    });
+});
+
+describe("The getColor method is supposed to return the color of the svg", function() {
+    var captcha = new Captcha();
+
+    it('getColor method is supposed to be a function', function(){
+        expect(typeof captcha.getColor()).toEqual('function');
+    });
+    it('the function should return a defined value', function(){
+        var color = ali.getColor();
+        expect(color).toBeDefined();
+    });
+    it('the function should return the color of the defaultConf', function(){
+        var color = captcha.getColor();
+        expect(color).toEqual(defaultConf.color);
     });
 });
