@@ -60,7 +60,7 @@ describe("The getColor method is supposed to return the color of the svg", funct
 describe('The setColor method is supposed to set a new color for the captcha', function(){
     var captcha = new Captcha();
     it('setColor method is supposed to be a function', function(){
-        expect(typeof captcha.setColor()).toEqual('function');
+        expect(typeof captcha.setColor).toEqual('function');
     });
     it('the returned value of the setColor method should be the same as the color which is setted and returned by the setter-method', function(){
         var color = "#000000";

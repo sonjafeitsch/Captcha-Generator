@@ -66,3 +66,17 @@ Captcha.prototype.checkCaptcha = function(input){
 Captcha.prototype.getColor = function(){
     return this.color;
 };
+
+/**
+ * Function which sets the color of the captcha
+ * @param color
+ * @returns {*|string}
+ */
+Captcha.prototype.setColor = function(color){
+    if(color === ""){
+        throw "Sorry, you entered an empty value. Please try it again."
+    } else {
+        this.color = color;
+        return this.color;
+    }
+};
